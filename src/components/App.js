@@ -4,9 +4,9 @@ import axios from 'axios';
 function App() {
     const [data, setData] = React.useState([])
 
-    useEffect(() => {
+    useEffect(() => { 
         axios
-            .get("http://localhost:8080/files/data")
+            .get(process.env.API_URL)
             .then((res) => {
                 setData(res.data)
             })

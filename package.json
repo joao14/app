@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development",
-    "start": "webpack-dev-server --mode development --open"
+    "build": "TARGET_ENV=production webpack --mode production",
+    "dev": "TARGET_ENV=development webpack --mode development",
+    "start": "TARGET_ENV=development webpack-dev-server --mode development --open"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +32,8 @@
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "css-loader": "^6.8.1",
+    "dotenv": "^16.3.1",
+    "dotenv-webpack": "^8.0.1",
     "mini-css-extract-plugin": "^2.7.6",
     "postcss-loader": "^7.3.3",
     "sass": "^1.63.6",
