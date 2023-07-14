@@ -16,6 +16,6 @@ ENV ENV_ENVIRONMENT=$ENVIRONMENT
 
 RUN npm run ${ENV_ENVIRONMENT} --if-present
 
-EXPOSE 3500
+EXPOSE 4000
 
 CMD [ "npm", "start" ]

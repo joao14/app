@@ -1,14 +1,17 @@
 import React, { useEffect } from 'react'
-import axios from 'axios';
+import api from '../funciones/api'
 
 function App() {
     const [data, setData] = React.useState([])
 
-    useEffect(() => { 
-        axios
-            .get(process.env.API_URL)
-            .then((res) => {
-                setData(res.data)
+    useEffect(() => {
+        api.getData()
+            .then((response) => {
+                setData(response.data)
+                console.log(response)
+            })
+            .catch((error) => {
+                console.log(error)
             })
     })
 
